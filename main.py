@@ -22,7 +22,7 @@ class SortingHelpFormatter(HelpFormatter):
 
 
 def parse_args() -> Namespace:
-    description = ('A simple command line interface for nvme parser module '
+    description = ('A simple command line inlet for nvme parser module '
                    'to validate and pretty-print objects.')
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument('--inlet', '-i', default='uart', choices=list(Inlets()))
