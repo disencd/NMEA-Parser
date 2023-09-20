@@ -1,7 +1,6 @@
 import argparse
 from os import environ
 from argparse import HelpFormatter, Namespace
-import pprint
 import logging
 import app
 from lib import Inlets
@@ -25,7 +24,7 @@ def parse_args() -> Namespace:
     description = ('A simple command line inlet for nvme parser module '
                    'to validate and pretty-print objects.')
     parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('--inlet', '-i', default='uart', choices=list(Inlets()))
+    parser.add_argument('--inlet', '-i', default='log', choices=list(Inlets()))
     parser.add_argument('--from-env', '-e', action='append', type=str,
                         help='List of all the options that needs to be read from the OS environment.')
     args = parser.parse_args()
