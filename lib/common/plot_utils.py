@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def plot_satellites_vs_time(data):
     """Plot the number of satellites tracked vs. time."""
     plt.figure(figsize=(12, 6))

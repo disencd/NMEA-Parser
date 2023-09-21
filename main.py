@@ -1,23 +1,11 @@
 import argparse
 from os import environ
-from argparse import HelpFormatter, Namespace
+from argparse import Namespace
 import logging
 import app
 from lib import Inlets
 
 log = logging.getLogger(__name__)
-
-
-class SortingHelpFormatter(HelpFormatter):
-    def add_arguments(self, actions):
-        # following code is left there in case we prefer to use attrgetatter
-        # actions = sorted(actions, key=attrgetter('option_strings'))
-        i = 1
-        if environ.get('ARGS_SORT', 'short') == 'long':
-            i = 0
-
-        actions = sorted(actions, key=lambda x: x.option_strings[i])
-        super(SortingHelpFormatter, self).add_arguments(actions)
 
 
 def parse_args() -> Namespace:

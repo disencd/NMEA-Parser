@@ -6,7 +6,6 @@ from lib.inlet import InletBot
 class Wifi(InletBot):
     def __init__(self):
         super().__init__()
-        self._config = self.config('wifi')
 
     def read(self):
         print("Wifi mode")

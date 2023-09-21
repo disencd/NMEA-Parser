@@ -1,3 +1,8 @@
+import os
+
+from lib.common.singleton import NMEASingleton
+
+singleton = NMEASingleton()
 
 CONFIG = {
     "uart": {
@@ -5,7 +10,7 @@ CONFIG = {
         "timeout": "1"
     },
     "log": {
-        "file": "data/stce_nmea_log.txt"
+        "file": f"{singleton.data_dir}{os.sep}stce_nmea_log.txt"
     },
     "ble": {
         # TODO

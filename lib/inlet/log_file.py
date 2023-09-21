@@ -1,13 +1,13 @@
 from lib.common.inlet_factory import InletFactory
 from lib.inlet import InletBot
-import config
+from lib.config import CONFIG
 
 
 @InletFactory.register('log')
 class LogFile(InletBot):
     def __init__(self):
         super().__init__()
-        self.data = config.CONFIG['log']
+        self.data = CONFIG['log']
 
     def read(self):
         print(f"Log file mode {self.data['file']}")

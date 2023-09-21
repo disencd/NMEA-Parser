@@ -8,7 +8,7 @@ from lib.common.inlet_factory import InletFactory
 from lib.inlet import InletBot
 from lib import NMEAValueError, NMEASerialException
 import serial
-import config
+from lib.config import CONFIG
 import logging
 
 log = logging.getLogger(__name__)
@@ -19,7 +19,7 @@ class UART(InletBot):
 
     def __init__(self):
         super().__init__()
-        self.data = config.CONFIG['log']
+        self.data = CONFIG['log']
 
     def read(self):
         print("UART mode")

@@ -4,6 +4,7 @@ from lib.inlet.uart import UART
 from lib.inlet.wifi import Wifi
 from lib.inlet.ble import BLE
 from lib.inlet.log_file import LogFile
+from lib.common.singleton import NMEASingleton
 
 class Inlets:
     """

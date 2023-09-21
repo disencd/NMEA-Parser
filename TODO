@@ -1,0 +1,8 @@
+TODO
+
+ - [ ] Use until method ie a timeout if no NMEA data is found from parser
+ - [ ] Improve README file
+ - [ ] Better comments on the code
+ - [ ] Add more tests
+ - [ ] Automate using tasks.py
+ - [ ] Use GitAction to enable CI where each commit should run a set of tests
